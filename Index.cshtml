@@ -1,0 +1,116 @@
+@{
+    ViewBag.Title = "Text Finder & Masking Tool";
+}
+
+<h2>Text Finder & Masking Tool</h2>
+
+<div id="search-section">
+    <label>Enter Text to Search:</label>
+    <input type="text" id="searchText" class="form-control" />
+    <button id="searchBtn" class="btn btn-primary" onclick="searchText()">Search</button>
+</div>
+
+<div id="result-section" style="display: none; margin-top: 20px;">
+    <h3>Search Results</h3>
+    <table class="table" id="resultTable">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll" onclick="selectAllFiles(this)" /></th>
+                <th>File Name</th>
+                <th>Occurrences</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Search results will be populated here -->
+        </tbody>
+    </table>
+
+    <div id="mask-section">
+        <label>Enter Mask Character:</label>
+        <input type="text" id="maskText" class="form-control" maxlength="1" />
+        <button id="maskBtn" class="btn btn-danger" onclick="confirmMask()">Mask</button>
+    </div>
+</div>
+
+<div id="confirmationPopup" class="modal" tabindex="-1" role="dialog" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Are you sure you want to mask the text <strong id="confirmSearchText"></strong> with <strong id="confirmMaskText"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="submitMask()">Yes</button>
+                <button class="btn btn-secondary" onclick="closePopup()">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+    function searchText() {
+        var searchText = document.getElementById('searchText').value;
+        if (!searchText) return alert('Please enter text to search.');
+
+        fetch('/api/TextSearch/Search', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ searchText: searchText })
+        }).then(response => response.json()).then(data => {
+            if (data.isError) {
+                alert(data.message);
+            } else {
+                // Populate search results
+                var tbody = document.querySelector('#resultTable tbody');
+                tbody.innerHTML = ''; // Clear existing results
+                data.forEach(file => {
+                    var row = `<tr>
+                                <td><input type="checkbox" class="file-checkbox" value="${file.FileName}" /></td>
+                                <td>${file.FileName}</td>
+                                <td>${file.Occurrences}</td>
+                               </tr>`;
+                    tbody.innerHTML += row;
+                });
+                document.getElementById('result-section').style.display = 'block';
+            }
+        });
+    }
+
+    function confirmMask() {
+        var selectedFiles = Array.from(document.querySelectorAll('.file-checkbox:checked')).map(cb => cb.value);
+        if (!selectedFiles.length) return alert('Please select at least one file.');
+
+        var searchText = document.getElementById('searchText').value;
+        var maskText = document.getElementById('maskText').value;
+        if (!maskText) return alert('Please enter a mask character.');
+
+        document.getElementById('confirmSearchText').textContent = searchText;
+        document.getElementById('confirmMaskText').textContent = maskText;
+
+        document.getElementById('confirmationPopup').style.display = 'block';
+    }
+
+    function submitMask() {
+        var selectedFiles = Array.from(document.querySelectorAll('.file-checkbox:checked')).map(cb => cb.value);
+        var searchText = document.getElementById('searchText').value;
+        var maskText = document.getElementById('maskText').value;
+
+        fetch('/api/TextSearch/Mask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ searchText: searchText, maskText: maskText, selectedFiles: selectedFiles })
+        }).then(response => response.json()).then(data => {
+            alert(data.message);
+            document.getElementById('confirmationPopup').style.display = 'none';
+            document.getElementById('result-section').style.display = 'none';
+        });
+    }
+
+    function closePopup() {
+        document.getElementById('confirmationPopup').style.display = 'none';
+    }
+
+    function selectAllFiles(checkbox) {
+        document.querySelectorAll('.file-checkbox').forEach(cb => cb.checked = checkbox.checked);
+    }
+</script>
