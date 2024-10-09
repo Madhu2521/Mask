@@ -1,0 +1,44 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var selectedFiles = [];
+
+        // Handle individual checkbox change event
+        $('.file-checkbox').change(function() {
+            var fileName = $(this).val();
+
+            if ($(this).is(':checked')) {
+                // Add the file to the selectedFiles array if checked
+                selectedFiles.push(fileName);
+            } else {
+                // Remove the file from the selectedFiles array if unchecked
+                selectedFiles = selectedFiles.filter(function(value) {
+                    return value !== fileName;
+                });
+            }
+
+            console.log("Selected files:", selectedFiles);  // Log the selected files for debugging
+        });
+
+        // Handle 'select all' checkbox
+        $('#select-all').change(function() {
+            if ($(this).is(':checked')) {
+                $('.file-checkbox').prop('checked', true).trigger('change');
+            } else {
+                $('.file-checkbox').prop('checked', false).trigger('change');
+            }
+        });
+
+        // Function to process the selected files (e.g., masking)
+        function processFiles() {
+            if (selectedFiles.length === 0) {
+                alert("No files selected!");
+                return;
+            }
+
+            // Proceed with further processing using selectedFiles array
+            console.log("Processing files:", selectedFiles);
+        }
+    });
+</script>
