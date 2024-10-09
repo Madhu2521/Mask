@@ -114,3 +114,57 @@
         document.querySelectorAll('.file-checkbox').forEach(cb => cb.checked = checkbox.checked);
     }
 </script>
+
+
+
+
+
+
+-----
+
+
+<script>
+    $(document).ready(function() {
+        // Bind the search button click event
+        $('#searchBtn').on('click', function() {
+            searchText();
+        });
+    });
+
+    function searchText() {
+        var searchText = $('#searchText').val();
+        if (!searchText) {
+            alert('Please enter text to search.');
+            return;
+        }
+
+        // Make the API call
+        $.ajax({
+            url: '/api/TextSearch/Search',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ searchText: searchText }),
+            success: function(response) {
+                if (response.isError) {
+                    alert(response.message);
+                } else {
+                    $('#result-section').show(); // Display results
+                    var resultTable = $('#resultTable tbody');
+                    resultTable.empty(); // Clear previous results
+                    response.forEach(function(file) {
+                        var row = `<tr>
+                                    <td><input type="checkbox" class="file-checkbox" value="${file.FileName}" /></td>
+                                    <td>${file.FileName}</td>
+                                    <td>${file.Occurrences}</td>
+                                   </tr>`;
+                        resultTable.append(row);
+                    });
+                }
+            },
+            error: function(err) {
+                alert('An error occurred while searching.');
+            }
+        });
+    }
+</script>
+
