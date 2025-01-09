@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .btn-red {
+      background-color: red;
+      color: white;
+    }
+    table {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Dynamic Environment Table</h2>
+    <div class="text-center mb-3">
+      <button class="btn btn-red" id="showDetailsButton">Show Details</button>
+      <button class="btn btn-red" id="hideDetailsButton">Hide Details</button>
+    </div>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Environment</th>
+          <th>Delete Status</th>
+          <th>Insert Status</th>
+          <th>Update Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ODP - RCHTERA (TX28)</td>
+          <td id="lblodpdelete">0</td>
+          <td id="lblodpinsert">0</td>
+          <td id="lblodpupdate">0</td>
+        </tr>
+        <tr>
+          <td>UAT - WULATERA (TX25)</td>
+          <td id="lbluatdelete">0</td>
+          <td id="lbluatinsert">0</td>
+          <td id="lbluatupdate">0</td>
+        </tr>
+        <tr>
+          <td>Dev/SIT - MDIVTERA (TX24)</td>
+          <td id="lbldevdelete">0</td>
+          <td id="lbldevinsert">0</td>
+          <td id="lbldevupdate">0</td>
+        </tr>
+        <tr>
+          <td>ADP - APRTERA (TX28)</td>
+          <td id="lbladpdelete">0</td>
+          <td id="lbladpinsert">0</td>
+          <td id="lbladpupdate">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Function to dynamically update table values
+    const showDetailsButton = document.getElementById('showDetailsButton');
+    const hideDetailsButton = document.getElementById('hideDetailsButton');
+
+    showDetailsButton.addEventListener('click', () => {
+      document.getElementById('lblodpdelete').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lblodpinsert').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lblodpupdate').textContent = Math.floor(Math.random() * 10);
+
+      document.getElementById('lbluatdelete').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lbluatinsert').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lbluatupdate').textContent = Math.floor(Math.random() * 10);
+
+      document.getElementById('lbldevdelete').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lbldevinsert').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lbldevupdate').textContent = Math.floor(Math.random() * 10);
+
+      document.getElementById('lbladpdelete').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lbladpinsert').textContent = Math.floor(Math.random() * 10);
+      document.getElementById('lbladpupdate').textContent = Math.floor(Math.random() * 10);
+    });
+
+    hideDetailsButton.addEventListener('click', () => {
+      document.getElementById('lblodpdelete').textContent = 0;
+      document.getElementById('lblodpinsert').textContent = 0;
+      document.getElementById('lblodpupdate').textContent = 0;
+
+      document.getElementById('lbluatdelete').textContent = 0;
+      document.getElementById('lbluatinsert').textContent = 0;
+      document.getElementById('lbluatupdate').textContent = 0;
+
+      document.getElementById('lbldevdelete').textContent = 0;
+      document.getElementById('lbldevinsert').textContent = 0;
+      document.getElementById('lbldevupdate').textContent = 0;
+
+      document.getElementById('lbladpdelete').textContent = 0;
+      document.getElementById('lbladpinsert').textContent = 0;
+      document.getElementById('lbladpupdate').textContent = 0;
+    });
+  </script>
+</body>
+</html>
