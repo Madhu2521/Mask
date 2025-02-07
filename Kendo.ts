@@ -27,6 +27,34 @@ export class ProfileDataLoadComponent implements OnInit, OnDestroy {
     this.displayloader = false;
     this.showResults = false;
     this.userInfo = this.sharedservice.getUserInfo();
+
+    // Initialize gridData with default values
+    this.gridData = [
+      {
+        Environment: 'ODP-RCHTERA',
+        DeleteStatus: 0,
+        InsertStatus: 0,
+        UpdateStatus: 0
+      },
+      {
+        Environment: 'UAT-WUATERA',
+        DeleteStatus: 0,
+        InsertStatus: 0,
+        UpdateStatus: 0
+      },
+      {
+        Environment: 'Dev/SIT-WDVTERA',
+        DeleteStatus: 0,
+        InsertStatus: 0,
+        UpdateStatus: 0
+      },
+      {
+        Environment: 'ADP-APRTERA',
+        DeleteStatus: 0,
+        InsertStatus: 0,
+        UpdateStatus: 0
+      }
+    ];
   }
 
   sendProfiles() {
@@ -53,27 +81,27 @@ export class ProfileDataLoadComponent implements OnInit, OnDestroy {
     this.gridData = [
       {
         Environment: 'ODP-RCHTERA',
-        DeleteStatus: data.filter(i => i.PlatformId == 'P' && i.MoveFlag == 'D')[0].RecordCount,
-        InsertStatus: data.filter(i => i.PlatformId == 'P' && i.MoveFlag == 'I')[0].RecordCount,
-        UpdateStatus: data.filter(i => i.PlatformId == 'P' && i.MoveFlag == 'U')[0].RecordCount
+        DeleteStatus: data.filter(i => i.PlatformId == 'P' && i.MoveFlag == 'D')[0]?.RecordCount || 0,
+        InsertStatus: data.filter(i => i.PlatformId == 'P' && i.MoveFlag == 'I')[0]?.RecordCount || 0,
+        UpdateStatus: data.filter(i => i.PlatformId == 'P' && i.MoveFlag == 'U')[0]?.RecordCount || 0
       },
       {
         Environment: 'UAT-WUATERA',
-        DeleteStatus: data.filter(i => i.PlatformId == 'U' && i.MoveFlag == 'D')[0].RecordCount,
-        InsertStatus: data.filter(i => i.PlatformId == 'U' && i.MoveFlag == 'I')[0].RecordCount,
-        UpdateStatus: data.filter(i => i.PlatformId == 'U' && i.MoveFlag == 'U')[0].RecordCount
+        DeleteStatus: data.filter(i => i.PlatformId == 'U' && i.MoveFlag == 'D')[0]?.RecordCount || 0,
+        InsertStatus: data.filter(i => i.PlatformId == 'U' && i.MoveFlag == 'I')[0]?.RecordCount || 0,
+        UpdateStatus: data.filter(i => i.PlatformId == 'U' && i.MoveFlag == 'U')[0]?.RecordCount || 0
       },
       {
         Environment: 'Dev/SIT-WDVTERA',
-        DeleteStatus: data.filter(i => i.PlatformId == 'D' && i.MoveFlag == 'D')[0].RecordCount,
-        InsertStatus: data.filter(i => i.PlatformId == 'D' && i.MoveFlag == 'I')[0].RecordCount,
-        UpdateStatus: data.filter(i => i.PlatformId == 'D' && i.MoveFlag == 'U')[0].RecordCount
+        DeleteStatus: data.filter(i => i.PlatformId == 'D' && i.MoveFlag == 'D')[0]?.RecordCount || 0,
+        InsertStatus: data.filter(i => i.PlatformId == 'D' && i.MoveFlag == 'I')[0]?.RecordCount || 0,
+        UpdateStatus: data.filter(i => i.PlatformId == 'D' && i.MoveFlag == 'U')[0]?.RecordCount || 0
       },
       {
         Environment: 'ADP-APRTERA',
-        DeleteStatus: data.filter(i => i.PlatformId == 'A' && i.MoveFlag == 'D')[0].RecordCount,
-        InsertStatus: data.filter(i => i.PlatformId == 'A' && i.MoveFlag == 'I')[0].RecordCount,
-        UpdateStatus: data.filter(i => i.PlatformId == 'A' && i.MoveFlag == 'U')[0].RecordCount
+        DeleteStatus: data.filter(i => i.PlatformId == 'A' && i.MoveFlag == 'D')[0]?.RecordCount || 0,
+        InsertStatus: data.filter(i => i.PlatformId == 'A' && i.MoveFlag == 'I')[0]?.RecordCount || 0,
+        UpdateStatus: data.filter(i => i.PlatformId == 'A' && i.MoveFlag == 'U')[0]?.RecordCount || 0
       }
     ];
   }
