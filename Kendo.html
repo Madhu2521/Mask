@@ -2,17 +2,17 @@
   <kendo-grid-column field="Environment" title="Environment"></kendo-grid-column>
   <kendo-grid-column field="DeleteStatus" title="Delete Status">
     <ng-template kendoGridCellTemplate let-dataItem>
-      <span id="lblodpdelete">{{ dataItem.DeleteStatus }}</span>
+      <span [attr.id]="'lbl' + dataItem.Environment.toLowerCase() + 'delete'">{{ dataItem.DeleteStatus }}</span>
     </ng-template>
   </kendo-grid-column>
   <kendo-grid-column field="InsertStatus" title="Insert Status">
     <ng-template kendoGridCellTemplate let-dataItem>
-      <span id="lblodpinsert">{{ dataItem.InsertStatus }}</span>
+      <span [attr.id]="'lbl' + dataItem.Environment.toLowerCase() + 'insert'">{{ dataItem.InsertStatus }}</span>
     </ng-template>
   </kendo-grid-column>
   <kendo-grid-column field="UpdateStatus" title="Update Status">
     <ng-template kendoGridCellTemplate let-dataItem>
-      <span id="lblodpupdate">{{ dataItem.UpdateStatus }}</span>
+      <span [attr.id]="'lbl' + dataItem.Environment.toLowerCase() + 'update'">{{ dataItem.UpdateStatus }}</span>
     </ng-template>
   </kendo-grid-column>
 </kendo-grid>
