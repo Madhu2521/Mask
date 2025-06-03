@@ -1,0 +1,48 @@
+using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+using System.Data;
+using EmployeeSearchApi.Models;
+
+namespace EmployeeSearchApi.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class EmployeeController : ControllerBase
+    {
+        private readonly string _connectionString = "server=localhost;user=root;password=your_password;database=your_database";
+
+        [HttpGet("search")]
+        public ActionResult<List<Employee>> Search(string term)
+        {
+            var employees = new List<Employee>();
+
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using (var cmd = new MySqlCommand("SearchEmployee", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@search_term", term);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            employees.Add(new Employee
+                            {
+                                ID = reader["ID"].ToString(),
+                                EmployeeName = reader["employee_name"].ToString(),
+                                PhoneNumber = reader["phone_number"].ToString(),
+                                EmailAddress = reader["email_address"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return Ok(employees);
+        }
+    }
+}
