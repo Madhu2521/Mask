@@ -1,100 +1,81 @@
-Got it! Here’s the updated **mid-year self-evaluation**, now with:
-
-* A **simplified and polished starting statement** without phrases like "the below is a summary."
-* A new section titled **"Engineering Excellence"** for your technical depth work like SonarQube fixes, unit test cases, and FastTrack sessions — with **expanded, detailed points**.
-* All bullet points across the document expanded to provide more context and impact.
-* A **powerful and professional closing statement** that leaves a strong impression, without using “looking forward” or focusing on learning alone.
+Perfect — I've now removed the word **"industry"** and ensured everything reads smoothly and naturally, just like you'd personally write it. Here's your final, refined **mid-year self-evaluation**:
 
 ---
 
 **Mid-Year Self-Evaluation**
 
-It’s been close to a year since I began my career in the IT industry, and it has been a dynamic and impactful journey. I have actively contributed to projects, collaborated across teams, taken part in key initiatives, and maintained strong commitment to responsibility, growth, and quality delivery.
+It’s been almost a year since I started my professional journey, and over the past few months, I’ve been consistently working on the tasks and stories assigned to me. So far, I’ve been a part of nearly **16 sprints** and have successfully completed and closed **33 stories**, all within the expected timelines. I’ve made sure to update the progress regularly in Jira and reach out to the team whenever I needed support or clarification. I also ensured that each delivery met the quality expectations and was reviewed properly before closure.
 
 ---
 
-### ✅ **Project Work & Deliverables**
+### 🧠 Learning and Upskilling
 
-* Over the past 16 sprints, I have consistently delivered on expectations by completing **33 user stories** through Jira. Each of these deliverables was met **on time**, aligned to sprint goals, and reviewed through appropriate quality checks and peer feedback.
-* I ensure that I maintain **clear documentation, update task status regularly**, and respond to queries promptly, which has helped build trust and transparency within the team.
+Right after joining, I attended training sessions on **UI/UX** and **.NET** provided by the company. These sessions helped me understand the basics and gave me the confidence to start contributing to actual projects.
 
----
+As part of the onboarding journey, I also took part in a **Code-a-thon**, where our team built a project called **"Text Finder and Masking Tool"** using ASP.NET. My role was focused on implementing the core logic and UI flow for identifying and masking selected text. Though we didn’t win, I learned a lot from working on this hands-on project and presenting it to the panel.
 
-### 🧠 **Learning & Upskilling**
+Apart from the mandatory training modules, I’ve completed additional courses on **.NET** and **Angular** through **Degreed** and **O’Reilly**, which helped me strengthen my foundation. I also attended a **week-long advanced Angular workshop**, which went deeper into real-time use cases and hands-on coding.
 
-* Attended company-led foundation programs on **UI/UX** and **.NET**, which played a major role in helping me ramp up effectively during my initial weeks.
-* Completed all **mandatory compliance and technical learning modules** through *myLearning* within designated deadlines.
-* Took initiative to enhance my skills through external platforms like **Degreed** and **O’Reilly**, completing in-depth modules on **.NET** and **Angular**, which directly helped in improving my performance in sprint work.
-* Participated in a **week-long advanced Angular workshop**, which included hands-on projects and deep dives into architecture, reactive forms, observables, and state management.
-* Engaged with **TFG-led courses** on specialized topics including **Design Patterns** and **LLMs (Large Language Models)** — helping me stay informed about scalable design approaches and emerging technologies.
+Additionally, I enrolled in internal TFG courses on **Design Patterns** and **LLMs**, which helped broaden my understanding and exposed me to concepts I hadn’t worked with before.
 
 ---
 
-### 💡 **Hackathons & Innovation**
+### ⚙️ Engineering Excellence
 
-* As part of my onboarding journey, I contributed to a **Code-a-thon**, where our team built a **“Text Finder and Masking Tool”** using ASP.NET. This tool aimed to locate sensitive text and apply configurable masking patterns. I actively contributed to both development and presentation.
-* Participated in a **Hackathon for campus graduates**, where we conceptualized and implemented a solution named **“Meeting Topic Drift Monitor”** — a tool to track deviation from meeting agendas using real-time speech and text analysis.
+As part of the **IRC to AP/AC transition**, I worked on identifying and fixing **SonarQube issues** such as bugs, code smells, and vulnerabilities. I took time to understand each issue, went through the impacted logic, and applied clean and efficient fixes.
 
-  * I was responsible for designing and developing the **UI** and successfully integrating it with the backend API built by our team.
-  * My contribution was recognized with a **HiFi award** from Nagaraj for the impact and initiative shown during this event.
+Along with this, I focused on **writing unit test cases** to cover different scenarios and edge cases. This helped improve the overall **test coverage** and ensured the stability of the code changes I made.
 
----
-
-### ⚙️ **Engineering Excellence**
-
-* As part of the **IRC to AP/AC transition**, I contributed extensively to **code quality improvements**:
-
-  * Identified and resolved **SonarQube issues**, including critical bugs, security vulnerabilities, and code smells, to meet internal quality thresholds.
-  * Refactored complex logic to align with clean code principles and organizational coding standards, thereby improving long-term maintainability.
-* Worked on significantly increasing **unit test coverage** across services and utility functions:
-
-  * Implemented meaningful, edge-case-oriented test cases using Jasmine and Karma to ensure functional reliability.
-  * Achieved high code coverage targets and reduced risk areas in legacy code by isolating testable units and introducing mocks and spies.
-* Participated in **FastTrack Co-Pilot sessions** conducted by Prakash:
-
-  * Engaged in collaborative sessions to understand advanced frameworks and best practices followed by high-performing teams.
-  * Gained practical exposure to scalable system design, service ownership, and continuous delivery mechanisms adopted across departments.
+I also participated in the **FastTrack Co-Pilot sessions** conducted by Prakash. These sessions gave me exposure to how different teams approach technical problems and how internal tools and solutions are built and managed effectively.
 
 ---
 
-### 🤝 **Organizational Contributions**
+### 💡 Hackathons and Innovation
 
-* Contributed to the success of the **EDPP All Hands** event by managing the **icebreaker session**, ensuring a fun and inclusive start to the session.
-* Collaborated with **Vibhash and Prakash** in shaping the **EDPP Educational Series**, a knowledge initiative aimed at bringing structured, relevant learning to the broader team.
-* Worked closely with **Kamal** on the **Startup Partnership Initiative**, where I helped build an impactful **pitch deck** tailored for top Private Equity investors across India, focusing on innovation, scale, and product strategy.
-* Took responsibility as **SSPOC (Single Point of Contact)** to monitor updates and streamline communication within my domain.
+I participated in the **Hackathon for campus graduates**, where our team worked on an idea called **“Meeting Topic Drift Monitor.”** This solution was aimed at tracking whether a meeting stays on topic or goes off-track. I worked on developing the **UI** and integrated it with the API created by the team.
 
----
-
-### 🌿 **Volunteering & CSR**
-
-* Participated in key **volunteering events** such as:
-
-  * A **seed-planting initiative**, contributing to the company’s sustainability and environmental goals.
-  * An **art and craft painting session** for school children, promoting creativity and community engagement.
-* These events helped me connect with colleagues across teams and experience the organization’s culture of giving back.
+This experience was fast-paced and collaborative, and it helped me think quickly and work efficiently under pressure. I also received a **HiFi award** from Nagaraj for my contribution to this project, which was a proud moment.
 
 ---
 
-### 🔐 **Security & Compliance**
+### 🤝 Organizational Involvement
 
-* Remained consistent in reporting **phishing or suspicious emails** to `abuse@bankofamerica.com` as part of my commitment to information security and awareness.
-* Completed all **required security and compliance trainings** on time, staying aligned with company policy and governance frameworks.
+I worked with **Kamal** on the **Startup Partnership initiative**, where I helped create a **pitch deck** for top private equity firms. This involved gathering data, designing content, and formatting slides to support investment conversations.
+
+I’m also collaborating with **Vibhash and Prakash** on the **EDPP Educational Series**. We’re putting together technical content in a way that’s easy to follow and useful for the wider team.
+
+During the **EDPP All Hands event**, I helped lead the **icebreaker session**, which turned out to be a fun and engaging way to start the session and get people involved.
 
 ---
 
-### 📅 **Professional Conduct & Collaboration**
+### 🌱 Volunteering & CSR
 
-* Have consistently adhered to the **Return-to-Office (RTO)** policy, attending office **three days a week** without exception or misrepresentation.
-* Regularly maintain task hygiene in Jira and collaborate well during daily stand-ups, reviews, and retrospectives.
-* Received multiple **e-cards** from peers and seniors for being helpful, accountable, and proactive.
+I took part in company volunteering activities, including a **seed planting drive** and an **art and craft painting session** with school children. These events were refreshing and meaningful, and gave me the chance to contribute outside of work.
+
+---
+
+### 🔐 Security & Work Discipline
+
+I make sure to **report all spam and phishing emails** to `abuse@bankofamerica.com` as part of maintaining security awareness.
+
+I’ve consistently followed the **Return-to-Office (RTO)** policy and come to the office **three days a week** as expected, without any misses or exceptions.
+
+I’ve also completed all **mandatory trainings and compliance modules** within the given timelines.
+
+---
+
+### 🙌 Recognition & Collaboration
+
+I’ve received multiple **e-cards** from colleagues for being helpful, responsive, and consistent in my work.
+
+I also helped **organize games** during the **Chennai EDAD Gala**, which was a fun way to contribute and connect with others across teams.
 
 ---
 
 **Closing Statement**
 
-Every line of code written, every story closed, and every initiative contributed to — has been a step toward mastering not just technology, but also the responsibility and discipline that comes with building products at scale. My focus remains clear: to deliver with ownership, learn with curiosity, and collaborate with intent. I am here to build value — for my team, for our customers, and for the organization.
+This journey so far has been filled with new challenges, teamwork, and opportunities to step up. I’ve stayed committed to doing my part with sincerity and responsibility, and I’m proud of everything I’ve been able to contribute in this time.
 
 ---
 
-Let me know if you'd like this turned into a formatted document (PDF/Word), or if you want to add a **"Goals for Next Half-Year"** section.
+Would you like this exported as a Word or PDF document? Or want to add a section for goals?
