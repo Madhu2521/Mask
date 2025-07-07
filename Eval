@@ -79,3 +79,112 @@ This journey so far has been filled with new challenges, teamwork, and opportuni
 ---
 
 Would you like this exported as a Word or PDF document? Or want to add a section for goals?
+
+
+
+Thank you for the clarification! So:
+
+* **IRC to AP & SE transition** is a **functional/feature-related migration** effort (from IRC to Epicenter).
+* Fixing **SonarQube issues, test coverage, etc.** is part of **code quality/engineering improvement**.
+* These need to be separated clearly in your evaluation.
+
+Here’s the revised version with that correction and distinction:
+
+---
+
+**Mid-Year Self-Evaluation**
+
+It’s been almost a year since I started my professional journey, and over the past few months, I’ve been consistently working on the tasks and stories assigned to me. So far, I’ve been a part of nearly **16 sprints** and have successfully completed and closed **33 stories**, all within the expected timelines. I make sure to regularly update Jira, follow through with reviews, and maintain communication with the team to ensure smooth delivery.
+
+---
+
+### 🧠 Learning and Upskilling
+
+Right after joining, I attended training sessions on **UI/UX** and **.NET** provided by the company. These sessions helped me understand the basics and gave me the confidence to start contributing to actual projects.
+
+As part of onboarding, I participated in a **Code-a-thon**, where our team built a **Text Finder and Masking Tool** using ASP.NET. I was responsible for the UI and core logic. Presenting it to the panel was a great learning experience, even though we didn’t win.
+
+I’ve completed all **mandatory courses** on *myLearning* within the timelines and additionally finished courses on **.NET** and **Angular** through **Degreed** and **O’Reilly**.
+
+I also attended a **5-day advanced Angular workshop**, which helped me understand concepts like reactive forms, routing, and services better. I completed TFG-led courses on **Design Patterns** and **LLMs**, which helped me explore broader software and AI concepts.
+
+---
+
+### 🔄 IRC to AP & SE Transition
+
+I have been actively involved in the **IRC to AP & SE transition**, which focuses on moving functionality from the IRC platform to **Epicenter**. As part of this, I worked on ensuring a smooth transition for data and feature mapping.
+
+The **data movement** between platforms has been tested and is functioning successfully. I’ve been part of reviewing existing flows, adapting them to new systems, and validating the accuracy of this transition.
+
+This work required strong attention to detail and cross-checking to avoid any mismatch or disruption in ongoing business processes.
+
+---
+
+### ⚙️ Engineering Excellence
+
+In parallel to the feature transition, I have worked on improving **code quality** by resolving **SonarQube issues**. This includes fixing bugs, cleaning up code smells, and addressing vulnerabilities.
+
+Each issue involved understanding the underlying logic, rewriting it in a more optimized way, and ensuring it didn’t affect the rest of the flow.
+
+I also focused on **writing meaningful unit tests**, especially for modules that were lacking coverage. This helped boost the overall **test coverage** in SonarQube and added confidence to the builds.
+
+I took part in **FastTrack Co-Pilot sessions** led by Prakash, where I got a chance to see how other teams solve engineering problems, maintain scalability, and follow best practices across different projects.
+
+---
+
+### 💡 Hackathons and Innovation
+
+I was part of the **Hackathon for campus graduates**, where our team worked on the idea **“Meeting Topic Drift Monitor.”**
+
+The tool was aimed at helping track if meetings were drifting from the original topic. I developed the **UI**, handled its behavior, and integrated it with the backend APIs. It was a great experience to brainstorm, work as a team, and build something end-to-end in a limited time.
+
+I received a **HiFi award from Nagaraj** for my contribution to this project.
+
+---
+
+### 🤝 Organizational Involvement
+
+I worked with **Kamal** on the **Startup Partnership initiative**, where I helped prepare a **pitch deck** for top private equity investors in India. The goal was to present startup ideas and strategy in a clear, compelling way.
+
+I’m also collaborating with **Vibhash and Prakash** on building the **EDPP Educational Series**, which simplifies technical topics for team knowledge sharing.
+
+During the **EDPP All Hands**, I hosted the **icebreaker session**, which helped set an interactive tone for the event.
+
+---
+
+### 🌱 Volunteering & CSR
+
+I participated in company volunteering events including:
+
+* A **seed planting drive** aimed at promoting sustainability.
+* An **art and craft session** with school children, which was both meaningful and joyful.
+
+These events gave me a chance to give back while connecting with colleagues in a different setting.
+
+---
+
+### 🔐 Security & Work Discipline
+
+I regularly report **phishing and spam emails** to `abuse@bankofamerica.com` as part of being alert to security concerns.
+
+I have consistently followed the **RTO policy**, attending office **three days per week** without any exceptions.
+
+All mandatory trainings were completed on time, and I’ve made it a habit to stay on top of assigned tasks and deadlines.
+
+---
+
+### 🙌 Recognition & Collaboration
+
+I received multiple **e-cards** from peers for being reliable, proactive, and supportive during team collaborations and project work.
+
+I also helped organize the **games during the Chennai EDAD Gala**, which was a fun opportunity to engage with the wider team.
+
+---
+
+**Closing Statement**
+
+From the very beginning, I’ve taken every opportunity seriously — whether it’s project work, innovation, upskilling, or team events. This journey so far has shaped me into someone who contributes with ownership, adapts quickly, and collaborates with intent.
+
+---
+
+Let me know if you'd like this version exported into a **Word or PDF** file — or if you want to include a short section for **future goals**.
